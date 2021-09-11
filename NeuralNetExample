@@ -1,0 +1,183 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled3.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "authorship_tag": "ABX9TyM63fPqvD+J4Pu71hIUSPa9",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/GaneshSelvaraj717/Ganesh-Selvaraj/blob/master/NeuralNetExample\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "qpEXlfWZWgZP"
+      },
+      "source": [
+        "import numpy as np\n",
+        "import matplotlib.pyplot as pplt"
+      ],
+      "execution_count": 1,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "bgQ2ZZwTWoyc"
+      },
+      "source": [
+        "x1= 2\n",
+        "x2 = 5\n",
+        "y = 31"
+      ],
+      "execution_count": 2,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "8XiE1iVTWuj3"
+      },
+      "source": [
+        "w1 = 1\n",
+        "w2 = 2\n",
+        "lr = 0.01\n",
+        "b = 0"
+      ],
+      "execution_count": 6,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9-1vZkNpWyQA",
+        "outputId": "b3383160-f463-4e3b-b774-65fa720fd2a1"
+      },
+      "source": [
+        "for epoch in range(10):\n",
+        "  ypred = w1*x1 + w2*x2 +b\n",
+        "  error = (y- ypred)**2\n",
+        "  dEw1 = 2*(y-ypred)*(-x1)\n",
+        "  dEw2 = 2*(y-ypred)*(-x2)\n",
+        "  dEb = 2*(y-ypred)*(-1)\n",
+        "  w1 = w1 - lr*dEw1\n",
+        "  w2 = w2 - lr*dEw2\n",
+        "  b = b-lr*dEb\n",
+        "  print(w1)\n",
+        "  print(w2)\n",
+        "  print(b)\n",
+        "  print(error)\n",
+        "\n"
+      ],
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1.76\n",
+            "3.9000000000000004\n",
+            "0.38\n",
+            "361\n",
+            "2.064\n",
+            "4.66\n",
+            "0.532\n",
+            "57.76000000000002\n",
+            "2.1856\n",
+            "4.964\n",
+            "0.5928\n",
+            "9.241599999999995\n",
+            "2.23424\n",
+            "5.0856\n",
+            "0.6171199999999999\n",
+            "1.478655999999994\n",
+            "2.2536959999999997\n",
+            "5.13424\n",
+            "0.6268479999999998\n",
+            "0.23658495999999973\n",
+            "2.2614783999999997\n",
+            "5.153696\n",
+            "0.6307391999999999\n",
+            "0.03785359360000106\n",
+            "2.26459136\n",
+            "5.1614784\n",
+            "0.6322956799999999\n",
+            "0.006056574975999949\n",
+            "2.265836544\n",
+            "5.16459136\n",
+            "0.632918272\n",
+            "0.0009690519961599918\n",
+            "2.2663346176\n",
+            "5.165836544\n",
+            "0.6331673087999999\n",
+            "0.0001550483193856164\n",
+            "2.26653384704\n",
+            "5.1663346176\n",
+            "0.6332669235199999\n",
+            "2.480773110166323e-05\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "InMgAtAdaiKG",
+        "outputId": "d93ab30c-5daa-4181-c952-d238b797dd9d"
+      },
+      "source": [
+        "ypred"
+      ],
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "30.995019264000003"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "O0mbTse4bq_R"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
